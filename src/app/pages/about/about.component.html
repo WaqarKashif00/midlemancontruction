@@ -1,0 +1,237 @@
+<div class="bg-brand-lightBg text-brand-textPrimary min-h-screen pt-20">
+  
+  <!-- INNER HERO BANNER -->
+  <section class="relative py-24 px-6 md:px-12 overflow-hidden border-b border-brand-lightBorder bg-brand-whiteCard">
+    <div class="absolute inset-0 z-0 opacity-10">
+      <img 
+        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80" 
+        alt="About Middleman Banner" 
+        class="w-full h-full object-cover grayscale"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-whiteCard via-brand-whiteCard/80 to-transparent"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto relative z-10 space-y-4 text-center">
+      <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-brand-orange">OUR STORY & PERSONNEL</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-brand-textPrimary">
+        Building Relationships <span class="text-brand-orange">For Over 28 Years</span>
+      </h1>
+      <p class="text-brand-textSecondary text-lg max-w-2xl mx-auto font-medium">
+        A legacy of schedule compliance, Accredited Quality contracting, and award-winning commercial builds across South Texas.
+      </p>
+    </div>
+  </section>
+
+  <!-- HISTORY & OVERVIEW -->
+  <section class="py-24 max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+    <div class="lg:col-span-7 space-y-6">
+      <div class="flex items-center space-x-3 text-brand-orange">
+        <span class="w-8 h-[3px] bg-brand-orange inline-block"></span>
+        <span class="text-xs uppercase font-extrabold tracking-widest">ABOUT US</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-textPrimary leading-tight">
+        Your Project Is In Good Hands
+      </h2>
+      <p class="text-brand-textSecondary leading-relaxed text-base font-medium">
+        Middleman Construction Company has been serving the San Antonio commercial construction community since 1998. We specialize in unique projects such as commercial retail and office spaces, mixed-use buildings, multi-story construction, medical center layouts, and advanced interior finish-outs.
+      </p>
+      <p class="text-brand-textSecondary leading-relaxed text-base font-medium">
+        Through extensive planning, scheduling compliance, and open-book organization, our team delivers results on time and under budget. We work closely with architects and designers to incorporate designs and layout formats that satisfy both client satisfaction and budgetary guidelines.
+      </p>
+      <p class="text-brand-textSecondary leading-relaxed text-base font-medium">
+        Middleman has adopted an extensive subcontractor qualification process to ensure that all on-site trades provide quality and are held to the upmost accountability. This dedication has made us an award-winning builder honored by the Associated Builders and Contractors (ABC), American Subcontractors Association (ASA), and the U.S. Green Building Council.
+      </p>
+    </div>
+
+    <!-- Right Side Image & Stats Panel (TD style layout) -->
+    <div class="lg:col-span-5 relative">
+      <div class="relative w-full aspect-square rounded-xl overflow-hidden bevel-tr shadow-xl bg-white border border-brand-lightBorder p-2 z-10">
+        <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=800&q=80" alt="Construction Professional" class="w-full h-full object-cover rounded-lg bevel-tr" />
+      </div>
+      <!-- Orange Hatch Accent behind the image -->
+      <div class="absolute -top-8 -right-8 w-40 h-40 hatch-pattern z-0"></div>
+      
+      <div class="absolute -bottom-8 -left-8 glass-panel bg-white/90 p-6 rounded-xl border border-brand-lightBorder shadow-lg text-center z-20 min-w-[200px]">
+        <div class="text-brand-orange text-4xl font-extrabold">28+</div>
+        <h4 class="text-brand-textPrimary font-bold text-sm mt-1 uppercase">Years of Stability</h4>
+        <p class="text-brand-textSecondary text-xs font-medium mt-1">Founded in 1998</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP & EXECUTIVE STAFF (TDIndustries Signature Vertical Tabs Showcase) -->
+  <section class="py-24 bg-brand-whiteCard border-y border-brand-lightBorder relative overflow-hidden">
+    <!-- Parallel hatch accent background -->
+    <div class="absolute top-0 right-0 w-64 h-64 hatch-gray opacity-30 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+        <div class="flex items-center justify-center space-x-3 text-brand-orange">
+          <span class="w-8 h-[3px] bg-brand-orange inline-block"></span>
+          <span class="text-xs uppercase font-extrabold tracking-widest">EXECUTIVE TEAM</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-textPrimary mb-2">
+          Stronger Together: Our Roster
+        </h2>
+        <p class="text-brand-textSecondary text-base font-medium leading-relaxed">
+          Select an executive officer to read their B2B project leadership biography.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Stacked Vertical Tabs (Left Side) -->
+        <div class="lg:col-span-4 flex flex-col space-y-2">
+          
+          <!-- Tab 1 -->
+          <div class="relative">
+            <button 
+              (click)="setActiveLeader('middleman')"
+              [ngClass]="activeLeader === 'middleman' ? 'bg-brand-orange text-white font-extrabold shadow-md' : 'bg-brand-lightBg hover:bg-brand-lightBorder text-brand-textSecondary hover:text-brand-textPrimary'"
+              class="w-full py-5 px-6 text-left uppercase tracking-wider text-sm transition-all duration-300 font-bold border-l-4 border-brand-orange flex items-center justify-between">
+              <span>Mark Middleman</span>
+              <span *ngIf="activeLeader !== 'middleman'" class="text-xl">→</span>
+            </button>
+            <!-- Right-pointing triangle indicator -->
+            <div *ngIf="activeLeader === 'middleman'" class="hidden lg:block absolute left-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[10px] border-l-brand-orange z-20"></div>
+          </div>
+
+          <!-- Tab 2 -->
+          <div class="relative">
+            <button 
+              (click)="setActiveLeader('miller')"
+              [ngClass]="activeLeader === 'miller' ? 'bg-brand-orange text-white font-extrabold shadow-md' : 'bg-brand-lightBg hover:bg-brand-lightBorder text-brand-textSecondary hover:text-brand-textPrimary'"
+              class="w-full py-5 px-6 text-left uppercase tracking-wider text-sm transition-all duration-300 font-bold border-l-4 border-brand-orange flex items-center justify-between">
+              <span>Rusty Miller</span>
+              <span *ngIf="activeLeader !== 'miller'" class="text-xl">→</span>
+            </button>
+            <div *ngIf="activeLeader === 'miller'" class="hidden lg:block absolute left-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[10px] border-l-brand-orange z-20"></div>
+          </div>
+
+          <!-- Tab 3 -->
+          <div class="relative">
+            <button 
+              (click)="setActiveLeader('caraway')"
+              [ngClass]="activeLeader === 'caraway' ? 'bg-brand-orange text-white font-extrabold shadow-md' : 'bg-brand-lightBg hover:bg-brand-lightBorder text-brand-textSecondary hover:text-brand-textPrimary'"
+              class="w-full py-5 px-6 text-left uppercase tracking-wider text-sm transition-all duration-300 font-bold border-l-4 border-brand-orange flex items-center justify-between">
+              <span>Liz Caraway</span>
+              <span *ngIf="activeLeader !== 'caraway'" class="text-xl">→</span>
+            </button>
+            <div *ngIf="activeLeader === 'caraway'" class="hidden lg:block absolute left-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[10px] border-l-brand-orange z-20"></div>
+          </div>
+
+          <!-- Tab 4 -->
+          <div class="relative">
+            <button 
+              (click)="setActiveLeader('kruizenga')"
+              [ngClass]="activeLeader === 'kruizenga' ? 'bg-brand-orange text-white font-extrabold shadow-md' : 'bg-brand-lightBg hover:bg-brand-lightBorder text-brand-textSecondary hover:text-brand-textPrimary'"
+              class="w-full py-5 px-6 text-left uppercase tracking-wider text-sm transition-all duration-300 font-bold border-l-4 border-brand-orange flex items-center justify-between">
+              <span>Mitch Kruizenga</span>
+              <span *ngIf="activeLeader !== 'kruizenga'" class="text-xl">→</span>
+            </button>
+            <div *ngIf="activeLeader === 'kruizenga'" class="hidden lg:block absolute left-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[10px] border-l-brand-orange z-20"></div>
+          </div>
+
+        </div>
+
+        <!-- Bio Display Card (Right Side, Beveled corner with dot accents) -->
+        <div class="lg:col-span-8 bg-brand-lightBg p-8 md:p-12 border border-brand-lightBorder shadow-sm bevel-tr flex items-center min-h-[400px] relative">
+          
+          <!-- Dot grid accent -->
+          <div class="absolute bottom-6 right-6 w-20 h-24 dot-grid-gray opacity-40 pointer-events-none"></div>
+
+          <!-- Content: Mark Middleman -->
+          <div *ngIf="activeLeader === 'middleman'" class="grid grid-cols-1 sm:grid-cols-12 gap-8 items-center w-full relative z-10 animate-[fadeInUp_0.4s_ease-out]">
+            <div class="sm:col-span-4 text-center">
+              <div class="w-32 h-32 rounded-full bg-white border-4 border-brand-orange flex items-center justify-center text-brand-orange font-extrabold text-4xl mx-auto shadow-md">
+                MM
+              </div>
+              <h4 class="text-brand-textPrimary font-bold text-xl mt-4">Mark Middleman</h4>
+              <p class="text-brand-orange text-sm font-bold uppercase tracking-wider mt-1">President</p>
+            </div>
+            <div class="sm:col-span-8 space-y-4">
+              <span class="text-xs uppercase font-extrabold text-brand-orange tracking-widest block border-b border-brand-lightBorder pb-2">FOUNDING OFFICER</span>
+              <p class="text-brand-textPrimary text-base font-medium leading-relaxed">
+                Founded Middleman Construction Company in 1998 in San Antonio. Under Mark's guidance, the company has completed many high-profile office complexes, surgical healthcare centers, and massive commercial retail developments like <strong>Singing Hills</strong>.
+              </p>
+              <div class="pt-4 flex justify-between text-sm text-brand-textSecondary font-bold">
+                <span>Vetting Field Experience</span>
+                <span class="text-brand-textPrimary">28+ Years</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content: Rusty Miller -->
+          <div *ngIf="activeLeader === 'miller'" class="grid grid-cols-1 sm:grid-cols-12 gap-8 items-center w-full relative z-10 animate-[fadeInUp_0.4s_ease-out]">
+            <div class="sm:col-span-4 text-center">
+              <div class="w-32 h-32 rounded-full bg-white border-4 border-brand-orange flex items-center justify-center text-brand-orange font-extrabold text-4xl mx-auto shadow-md">
+                RM
+              </div>
+              <h4 class="text-brand-textPrimary font-bold text-xl mt-4">Rusty Miller</h4>
+              <p class="text-brand-orange text-sm font-bold uppercase tracking-wider mt-1">VP of Construction</p>
+            </div>
+            <div class="sm:col-span-8 space-y-4">
+              <span class="text-xs uppercase font-extrabold text-brand-orange tracking-widest block border-b border-brand-lightBorder pb-2">FIELD OPERATIONS DIRECTIVE</span>
+              <p class="text-brand-textPrimary text-base font-medium leading-relaxed">
+                Directly responsible for subcontractor qualification audits, safety programs integration on job sites, and CPM schedule compliance execution. Rusty Miller was nominated as the ASA Outstanding Project Manager of the Year.
+              </p>
+              <div class="pt-4 flex justify-between text-sm text-brand-textSecondary font-bold">
+                <span>Vetting Field Experience</span>
+                <span class="text-brand-textPrimary">22+ Years</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content: Liz Caraway -->
+          <div *ngIf="activeLeader === 'caraway'" class="grid grid-cols-1 sm:grid-cols-12 gap-8 items-center w-full relative z-10 animate-[fadeInUp_0.4s_ease-out]">
+            <div class="sm:col-span-4 text-center">
+              <div class="w-32 h-32 rounded-full bg-white border-4 border-brand-orange flex items-center justify-center text-brand-orange font-extrabold text-4xl mx-auto shadow-md">
+                LC
+              </div>
+              <h4 class="text-brand-textPrimary font-bold text-xl mt-4">Liz Caraway</h4>
+              <p class="text-brand-orange text-sm font-bold uppercase tracking-wider mt-1">Director of Operations</p>
+            </div>
+            <div class="sm:col-span-8 space-y-4">
+              <span class="text-xs uppercase font-extrabold text-brand-orange tracking-widest block border-b border-brand-lightBorder pb-2">OPERATIONAL EFFICIENCY</span>
+              <p class="text-brand-textPrimary text-base font-medium leading-relaxed">
+                Coordinates our internal estimating pipelines, local administrative coordination support, materials tracking logs, and corporate contract administration processes.
+              </p>
+              <div class="pt-4 flex justify-between text-sm text-brand-textSecondary font-bold">
+                <span>Vetting Operations Experience</span>
+                <span class="text-brand-textPrimary">18+ Years</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content: Mitch Kruizenga -->
+          <div *ngIf="activeLeader === 'kruizenga'" class="grid grid-cols-1 sm:grid-cols-12 gap-8 items-center w-full relative z-10 animate-[fadeInUp_0.4s_ease-out]">
+            <div class="sm:col-span-4 text-center">
+              <div class="w-32 h-32 rounded-full bg-white border-4 border-brand-orange flex items-center justify-center text-brand-orange font-extrabold text-4xl mx-auto shadow-md">
+                MK
+              </div>
+              <h4 class="text-brand-textPrimary font-bold text-xl mt-4">Mitch Kruizenga</h4>
+              <p class="text-brand-orange text-sm font-bold uppercase tracking-wider mt-1">General Superintendent</p>
+            </div>
+            <div class="sm:col-span-8 space-y-4">
+              <span class="text-xs uppercase font-extrabold text-brand-orange tracking-widest block border-b border-brand-lightBorder pb-2">JOBSITE CRAFT MANAGEMENT</span>
+              <p class="text-brand-textPrimary text-base font-medium leading-relaxed">
+                Manages all field Superintendents and self-performed concrete and carpentry crews, ensuring safety on jobsites and enforcing the exact construction tolerances required for premium commercial builds.
+              </p>
+              <div class="pt-4 flex justify-between text-sm text-brand-textSecondary font-bold">
+                <span>Vetting Jobsite Experience</span>
+                <span class="text-brand-textPrimary">25+ Years</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</div>

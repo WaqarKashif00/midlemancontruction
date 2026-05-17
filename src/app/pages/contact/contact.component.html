@@ -1,0 +1,136 @@
+<div class="bg-brand-lightBg text-brand-textPrimary min-h-screen pt-20">
+  
+  <!-- INNER HERO BANNER -->
+  <section class="relative py-24 px-6 md:px-12 overflow-hidden border-b border-brand-lightBorder bg-brand-whiteCard">
+    <div class="absolute inset-0 z-0 opacity-10">
+      <img 
+        src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80" 
+        alt="Contact Banner" 
+        class="w-full h-full object-cover grayscale"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-whiteCard via-brand-whiteCard/80 to-transparent"></div>
+    </div>
+
+    <!-- Drafting dot grid overlay -->
+    <div class="absolute inset-0 dot-grid-gray opacity-40 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10 space-y-4 text-center">
+      <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-brand-orange">PROJECT ESTIMATION</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-brand-textPrimary">
+        Submit Your <span class="text-brand-orange">Proposal Request</span>
+      </h1>
+      <p class="text-brand-textSecondary text-lg max-w-2xl mx-auto font-medium">
+        Contact our main office to initiate pre-construction evaluations or to submit subcontractor bids.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT & FORM -->
+  <section class="py-24 max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+    
+    <div class="lg:col-span-5 space-y-8">
+      <div class="bg-white p-8 border border-brand-lightBorder rounded-none bevel-tr shadow-sm space-y-6">
+        <h3 class="text-brand-textPrimary font-extrabold text-xl border-b border-brand-lightBorder pb-3">Main Office</h3>
+        
+        <div class="space-y-4">
+          <div class="flex items-start space-x-4 text-sm font-medium">
+            <span class="text-brand-orange text-xl mt-0.5">📍</span>
+            <div>
+              <p class="text-brand-textPrimary font-extrabold uppercase tracking-wider text-xs mb-1">Corporate Address</p>
+              <p class="text-brand-textSecondary">9639 McCullough Ave<br>San Antonio, TX 78216</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4 text-sm font-medium">
+            <span class="text-brand-orange text-xl mt-0.5">📞</span>
+            <div>
+              <p class="text-brand-textPrimary font-extrabold uppercase tracking-wider text-xs mb-1">Direct Line</p>
+              <p class="text-brand-textSecondary">P: 210.342.6322</p>
+              <p class="text-brand-textSecondary">F: 210.342.6324</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4 text-sm font-medium">
+            <span class="text-brand-orange text-xl mt-0.5">📧</span>
+            <div>
+              <p class="text-brand-textPrimary font-extrabold uppercase tracking-wider text-xs mb-1">Estimating</p>
+              <p class="text-brand-textSecondary">estimating&#64;middlemanconstruction.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 border border-brand-lightBorder rounded-none bevel-tr shadow-sm space-y-4">
+        <h3 class="text-brand-textPrimary font-extrabold text-lg">Subcontractor Bidding</h3>
+        <p class="text-brand-textSecondary text-sm font-medium leading-relaxed">
+          Middleman holds a strict qualifications process for all our trades. If you are interested in bidding on a project, please submit your trade qualifications via our form or call our estimating department directly.
+        </p>
+      </div>
+    </div>
+
+    <!-- Proposal Form Container -->
+    <div class="lg:col-span-7">
+      <div class="bg-white p-8 border border-brand-lightBorder rounded-none bevel-tl-br shadow-xl relative overflow-hidden">
+        
+        <!-- Form View -->
+        <div *ngIf="!isSubmitted" class="animate-[fadeInUp_0.4s_ease-out]">
+          <h3 class="text-brand-textPrimary font-extrabold text-2xl mb-2">Request A Proposal</h3>
+          <p class="text-brand-textSecondary text-sm mb-6 font-medium">Fill out the information below to connect with our bidding coordinators.</p>
+          
+          <form (ngSubmit)="onSubmit()" class="space-y-4">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-1">
+                <label class="text-brand-textPrimary text-xs font-bold uppercase tracking-wider">First Name *</label>
+                <input type="text" required class="w-full bg-brand-lightBg border border-brand-lightBorder rounded-none focus:outline-none focus:border-brand-orange p-3 text-brand-textPrimary font-medium">
+              </div>
+              <div class="space-y-1">
+                <label class="text-brand-textPrimary text-xs font-bold uppercase tracking-wider">Last Name *</label>
+                <input type="text" required class="w-full bg-brand-lightBg border border-brand-lightBorder rounded-none focus:outline-none focus:border-brand-orange p-3 text-brand-textPrimary font-medium">
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-1">
+                <label class="text-brand-textPrimary text-xs font-bold uppercase tracking-wider">Company Name</label>
+                <input type="text" class="w-full bg-brand-lightBg border border-brand-lightBorder rounded-none focus:outline-none focus:border-brand-orange p-3 text-brand-textPrimary font-medium">
+              </div>
+              <div class="space-y-1">
+                <label class="text-brand-textPrimary text-xs font-bold uppercase tracking-wider">Phone Number *</label>
+                <input type="tel" required class="w-full bg-brand-lightBg border border-brand-lightBorder rounded-none focus:outline-none focus:border-brand-orange p-3 text-brand-textPrimary font-medium">
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-brand-textPrimary text-xs font-bold uppercase tracking-wider">Email Address *</label>
+              <input type="email" required class="w-full bg-brand-lightBg border border-brand-lightBorder rounded-none focus:outline-none focus:border-brand-orange p-3 text-brand-textPrimary font-medium">
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-brand-textPrimary text-xs font-bold uppercase tracking-wider">Project Details / Message *</label>
+              <textarea required rows="4" class="w-full bg-brand-lightBg border border-brand-lightBorder rounded-none focus:outline-none focus:border-brand-orange p-3 text-brand-textPrimary font-medium resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 mt-4 bg-brand-orange text-white font-extrabold text-sm uppercase tracking-wider rounded-none bevel-br hover:bg-brand-orangeDark transition-all shadow-md flex items-center justify-center space-x-2">
+              <span>Send Message</span>
+              <span>→</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Success Message View -->
+        <div *ngIf="isSubmitted" class="py-12 flex flex-col items-center justify-center text-center animate-[fadeInUp_0.4s_ease-out]">
+          <div class="w-20 h-20 rounded-full bg-brand-orange/10 border-2 border-brand-orange flex items-center justify-center text-brand-orange text-4xl font-extrabold mb-6 animate-[pulseGlow_2s_infinite]">
+            ✓
+          </div>
+          <h3 class="text-3xl font-extrabold text-brand-textPrimary mb-3">Transmission Successful</h3>
+          <p class="text-brand-textSecondary text-base font-medium max-w-sm">
+            Thank you for reaching out to Middleman Construction. An estimator or project coordinator will review your inquiry and contact you shortly.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+</div>

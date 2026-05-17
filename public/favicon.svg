@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250" width="100%" height="100%">
+  <!-- Left Geometric Tower -->
+  <path d="M0,190 L0,100 L120,100 L120,190 L85,190 L85,130 L35,130 L35,190 Z" fill="#0B0D13" />
+  
+  <!-- Right Geometric Tower (Taller) -->
+  <path d="M130,190 L130,80 L250,80 L250,190 L215,190 L215,110 L165,110 L165,190 Z" fill="#0B0D13" />
+  
+  <!-- Golden-Brown Horizontal Baseline -->
+  <rect x="35" y="198" width="215" height="12" fill="#B98324" />
+</svg>

@@ -1,0 +1,118 @@
+<div class="bg-brand-lightBg text-brand-textPrimary min-h-screen pt-20">
+  
+  <!-- INNER HERO BANNER -->
+  <section class="relative py-24 px-6 md:px-12 overflow-hidden border-b border-brand-lightBorder bg-brand-whiteCard">
+    <div class="absolute inset-0 z-0 opacity-10">
+      <img 
+        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" 
+        alt="Projects Banner" 
+        class="w-full h-full object-cover grayscale"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-whiteCard via-brand-whiteCard/80 to-transparent"></div>
+    </div>
+
+    <!-- Drafting dot grid overlay -->
+    <div class="absolute inset-0 dot-grid-gray opacity-40 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10 space-y-4 text-center">
+      <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-brand-orange">OUR SHOWCASE</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-brand-textPrimary">
+        Landmark Commercial <span class="text-brand-orange">Symphonies</span>
+      </h1>
+      <p class="text-brand-textSecondary text-lg max-w-2xl mx-auto font-medium">
+        A legacy of high-profile mixed-use masterplans, award-winning retail dining fit-outs, and LEED-certified medical offices across South Texas.
+      </p>
+    </div>
+  </section>
+
+  <!-- FILTER CONTROLS & GRID -->
+  <section class="py-16 max-w-7xl mx-auto px-6 md:px-12">
+    
+    <!-- Filter Buttons Row (TD Style Rectangular Blocks) -->
+    <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+      <button 
+        (click)="setFilter('all')"
+        [ngClass]="activeFilter === 'all' ? 'bg-brand-orange border-brand-orange text-white shadow-md' : 'bg-white border-brand-lightBorder hover:border-brand-orange text-brand-textSecondary hover:text-brand-textPrimary shadow-sm'"
+        class="px-6 py-2.5 font-extrabold text-xs uppercase rounded-none bevel-tr border tracking-wider transition-all duration-300">
+        Show All
+      </button>
+      <button 
+        (click)="setFilter('mixed-use')"
+        [ngClass]="activeFilter === 'mixed-use' ? 'bg-brand-orange border-brand-orange text-white shadow-md' : 'bg-white border-brand-lightBorder hover:border-brand-orange text-brand-textSecondary hover:text-brand-textPrimary shadow-sm'"
+        class="px-6 py-2.5 font-extrabold text-xs uppercase rounded-none bevel-tr border tracking-wider transition-all duration-300">
+        Mixed-Use
+      </button>
+      <button 
+        (click)="setFilter('healthcare')"
+        [ngClass]="activeFilter === 'healthcare' ? 'bg-brand-orange border-brand-orange text-white shadow-md' : 'bg-white border-brand-lightBorder hover:border-brand-orange text-brand-textSecondary hover:text-brand-textPrimary shadow-sm'"
+        class="px-6 py-2.5 font-extrabold text-xs uppercase rounded-none bevel-tr border tracking-wider transition-all duration-300">
+        Healthcare / Medical
+      </button>
+      <button 
+        (click)="setFilter('retail')"
+        [ngClass]="activeFilter === 'retail' ? 'bg-brand-orange border-brand-orange text-white shadow-md' : 'bg-white border-brand-lightBorder hover:border-brand-orange text-brand-textSecondary hover:text-brand-textPrimary shadow-sm'"
+        class="px-6 py-2.5 font-extrabold text-xs uppercase rounded-none bevel-tr border tracking-wider transition-all duration-300">
+        Retail / Dining
+      </button>
+      <button 
+        (click)="setFilter('office')"
+        [ngClass]="activeFilter === 'office' ? 'bg-brand-orange border-brand-orange text-white shadow-md' : 'bg-white border-brand-lightBorder hover:border-brand-orange text-brand-textSecondary hover:text-brand-textPrimary shadow-sm'"
+        class="px-6 py-2.5 font-extrabold text-xs uppercase rounded-none bevel-tr border tracking-wider transition-all duration-300">
+        Offices & Industrial
+      </button>
+    </div>
+
+    <!-- Dynamic Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      @for (project of filteredProjects; track project.title) {
+        <div [routerLink]="['/projects', project.slug]" class="cursor-pointer bg-white rounded-none border border-brand-lightBorder overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col group transition-all duration-500 bevel-tr">
+          
+          <!-- Image -->
+          <div class="relative h-64 overflow-hidden border-b border-brand-lightBorder">
+            <img 
+              [src]="project.image" 
+              [alt]="project.title" 
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <!-- Category Tag -->
+            <div class="absolute top-4 left-4 px-3 py-1.5 bg-brand-orange text-white font-extrabold text-[10px] uppercase shadow-md tracking-wider bevel-br">
+              {{ project.categoryLabel }}
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="p-6 space-y-3 flex-grow flex flex-col justify-between">
+            <div class="space-y-2">
+              <span *ngIf="project.award" class="text-[10px] text-brand-goldAccent font-extrabold uppercase tracking-wider block drop-shadow-sm">
+                {{ project.award }}
+              </span>
+              <h3 class="text-lg font-extrabold text-brand-textPrimary group-hover:text-brand-orange transition-colors">
+                {{ project.title }}
+              </h3>
+              <p class="text-brand-textSecondary text-sm font-medium leading-relaxed">
+                {{ project.description }}
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-brand-lightBorder flex items-center justify-between text-[11px] text-brand-orange font-extrabold uppercase tracking-wider">
+              <span>{{ project.location }}</span>
+              <span class="group-hover:translate-x-1.5 transition-transform text-brand-textPrimary">Read Case Study →</span>
+            </div>
+          </div>
+
+        </div>
+      } @empty {
+        <div class="col-span-full py-16 text-center text-brand-textSecondary text-sm font-medium">
+          No projects found in this category.
+        </div>
+      }
+
+    </div>
+
+  </section>
+
+</div>

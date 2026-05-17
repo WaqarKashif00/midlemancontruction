@@ -1,0 +1,151 @@
+<nav [ngClass]="{
+  'py-6 bg-transparent border-transparent': !isScrolled,
+  'py-4 bg-white/95 backdrop-blur-md shadow-sm border-b border-brand-lightBorder': isScrolled
+}" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+    <!-- Logo -->
+    <a routerLink="/" class="flex items-center group cursor-pointer">
+      <img src="/assets/logo.svg" alt="Middleman Construction Logo" class="h-14 md:h-16 w-auto transition-transform duration-500 group-hover:-translate-y-1" />
+    </a>
+
+    <!-- Desktop Navigation Items -->
+    <div class="hidden lg:flex items-center space-x-8">
+      <a routerLink="/" routerLinkActive="text-brand-orange" [routerLinkActiveOptions]="{exact: true}" [ngClass]="isScrolled ? 'text-brand-textPrimary' : 'text-brand-textPrimary'" class="font-extrabold text-sm uppercase tracking-wider hover:text-brand-orange transition-colors duration-300 relative py-2 group">
+        Home
+        <span class="absolute bottom-0 left-0 w-0 h-[3px] bg-brand-orange transition-all duration-300 group-hover:w-full"></span>
+      </a>
+
+      <!-- About Dropdown Link -->
+      <div class="relative group py-2" (mouseenter)="openDropdown('about')" (mouseleave)="closeDropdown()">
+        <a routerLink="/about" routerLinkActive="text-brand-orange" [ngClass]="isScrolled ? 'text-brand-textPrimary' : 'text-brand-textPrimary'" class="font-extrabold text-sm uppercase tracking-wider hover:text-brand-orange transition-colors duration-300 flex items-center space-x-1 cursor-pointer">
+          <span>About Us</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform group-hover:rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+        
+        <!-- About Mega Menu Dropdown -->
+        <div class="absolute top-full left-1/2 -translate-x-1/2 w-64 bg-white border border-brand-lightBorder p-4 shadow-xl transition-all duration-300 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto bevel-br">
+          <div class="space-y-1">
+            <a routerLink="/about" class="block p-3 rounded-lg hover:bg-brand-lightBg group/item transition-colors duration-200">
+              <p class="text-brand-textPrimary font-extrabold text-sm group-hover/item:text-brand-orange transition-colors uppercase tracking-wider">Our History</p>
+              <p class="text-brand-textSecondary text-xs mt-1 font-medium">Founded in 1998 in San Antonio</p>
+            </a>
+            <a routerLink="/safety" class="block p-3 rounded-lg hover:bg-brand-lightBg group/item transition-colors duration-200">
+              <p class="text-brand-textPrimary font-extrabold text-sm group-hover/item:text-brand-orange transition-colors uppercase tracking-wider">Safety & STEP</p>
+              <p class="text-brand-textSecondary text-xs mt-1 font-medium">Platinum STEP Safety Award</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services Dropdown Link -->
+      <div class="relative group py-2" (mouseenter)="openDropdown('services')" (mouseleave)="closeDropdown()">
+        <a routerLink="/services" routerLinkActive="text-brand-orange" [ngClass]="isScrolled ? 'text-brand-textPrimary' : 'text-brand-textPrimary'" class="font-extrabold text-sm uppercase tracking-wider hover:text-brand-orange transition-colors duration-300 flex items-center space-x-1 cursor-pointer">
+          <span>Services</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform group-hover:rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+        
+        <!-- Services Mega Menu Dropdown -->
+        <div class="absolute top-full left-1/2 -translate-x-1/2 w-[480px] bg-white border border-brand-lightBorder p-6 shadow-xl transition-all duration-300 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto bevel-br">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <h4 class="text-brand-orange text-xs font-extrabold uppercase tracking-widest mb-3 border-b border-brand-lightBorder pb-2">Core Competencies</h4>
+              <div class="space-y-1">
+                <a routerLink="/services" class="block p-3 rounded-lg hover:bg-brand-lightBg transition-colors">
+                  <p class="text-brand-textPrimary font-extrabold text-sm uppercase tracking-wider">Pre-Construction</p>
+                  <p class="text-brand-textSecondary text-xs mt-1 font-medium">Cost reviews & value engineering</p>
+                </a>
+                <a routerLink="/services" class="block p-3 rounded-lg hover:bg-brand-lightBg transition-colors">
+                  <p class="text-brand-textPrimary font-extrabold text-sm uppercase tracking-wider">Construction Manager</p>
+                  <p class="text-brand-textSecondary text-xs mt-1 font-medium">CMAR under-budget expertise</p>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-brand-orange text-xs font-extrabold uppercase tracking-widest mb-3 border-b border-brand-lightBorder pb-2">Capabilities</h4>
+              <div class="space-y-1">
+                <a routerLink="/services" class="block p-3 rounded-lg hover:bg-brand-lightBg transition-colors">
+                  <p class="text-brand-textPrimary font-extrabold text-sm uppercase tracking-wider">Design-Build</p>
+                  <p class="text-brand-textSecondary text-xs mt-1 font-medium">Single-point responsibility</p>
+                </a>
+                <a routerLink="/services" class="block p-3 rounded-lg hover:bg-brand-lightBg transition-colors">
+                  <p class="text-brand-textPrimary font-extrabold text-sm uppercase tracking-wider">Self-Performed Work</p>
+                  <p class="text-brand-textSecondary text-xs mt-1 font-medium">Direct control over quality</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a routerLink="/projects" routerLinkActive="text-brand-orange" [ngClass]="isScrolled ? 'text-brand-textPrimary' : 'text-brand-textPrimary'" class="font-extrabold text-sm uppercase tracking-wider hover:text-brand-orange transition-colors duration-300 relative py-2 group">
+        Projects
+        <span class="absolute bottom-0 left-0 w-0 h-[3px] bg-brand-orange transition-all duration-300 group-hover:w-full"></span>
+      </a>
+
+      <a routerLink="/careers" routerLinkActive="text-brand-orange" [ngClass]="isScrolled ? 'text-brand-textPrimary' : 'text-brand-textPrimary'" class="font-extrabold text-sm uppercase tracking-wider hover:text-brand-orange transition-colors duration-300 relative py-2 group">
+        Careers
+        <span class="absolute bottom-0 left-0 w-0 h-[3px] bg-brand-orange transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </div>
+
+    <!-- Contact CTA Button -->
+    <div class="hidden lg:block">
+      <a routerLink="/contact" class="px-6 py-3 bg-brand-orange text-white font-extrabold uppercase tracking-wider text-sm rounded-none bevel-br hover:bg-brand-orangeDark transition-all duration-300 shadow-md hover:shadow-brand-orange/20 hover:-translate-y-0.5 active:translate-y-0 block">
+        Contact Us
+      </a>
+    </div>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button (click)="toggleMobileMenu()" class="lg:hidden p-2 text-brand-textPrimary hover:text-brand-orange focus:outline-none transition-colors duration-300">
+      <svg *ngIf="!isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+      <svg *ngIf="isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div [ngClass]="{
+    'translate-x-0 opacity-100': isMobileMenuOpen,
+    'translate-x-full opacity-0 pointer-events-none': !isMobileMenuOpen
+  }" class="fixed top-[73px] right-0 w-full h-[calc(100vh-73px)] bg-white/95 backdrop-blur-lg border-t border-brand-lightBorder p-8 transition-all duration-500 ease-in-out z-40 lg:hidden flex flex-col justify-between overflow-y-auto shadow-2xl">
+    <div class="space-y-6">
+      <div class="flex flex-col space-y-4">
+        <a routerLink="/" (click)="closeMobileMenu()" class="text-brand-textPrimary text-xl font-extrabold hover:text-brand-orange transition-colors">Home</a>
+        
+        <div class="border-t border-brand-lightBorder pt-4">
+          <p class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">About Middleman</p>
+          <div class="pl-4 flex flex-col space-y-3 mt-2">
+            <a routerLink="/about" (click)="closeMobileMenu()" class="text-brand-textSecondary font-bold text-base hover:text-brand-orange transition-colors">Our History</a>
+            <a routerLink="/safety" (click)="closeMobileMenu()" class="text-brand-textSecondary font-bold text-base hover:text-brand-orange transition-colors">Safety Commitment</a>
+          </div>
+        </div>
+
+        <div class="border-t border-brand-lightBorder pt-4">
+          <p class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2">Services</p>
+          <div class="pl-4 flex flex-col space-y-3 mt-2">
+            <a routerLink="/services" (click)="closeMobileMenu()" class="text-brand-textSecondary font-bold text-base hover:text-brand-orange transition-colors">Core Capabilities</a>
+          </div>
+        </div>
+
+        <a routerLink="/projects" (click)="closeMobileMenu()" class="text-brand-textPrimary text-xl font-extrabold hover:text-brand-orange transition-colors border-t border-brand-lightBorder pt-4 block">Projects</a>
+        <a routerLink="/careers" (click)="closeMobileMenu()" class="text-brand-textPrimary text-xl font-extrabold hover:text-brand-orange transition-colors border-t border-brand-lightBorder pt-4 block">Careers</a>
+      </div>
+    </div>
+
+    <div class="space-y-4 pt-6 border-t border-brand-lightBorder">
+      <a routerLink="/contact" (click)="closeMobileMenu()" class="w-full py-4 bg-brand-orange text-white font-extrabold text-center uppercase tracking-wider rounded-none bevel-br hover:bg-brand-orangeDark transition-all block shadow-md">
+        Contact Office
+      </a>
+      <p class="text-brand-textSecondary text-xs font-bold text-center">
+        9639 McCullough Ave, San Antonio, TX 78216
+      </p>
+    </div>
+  </div>
+</nav>

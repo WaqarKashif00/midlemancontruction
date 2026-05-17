@@ -1,0 +1,132 @@
+<div class="bg-brand-lightBg text-brand-textPrimary min-h-screen pt-20" *ngIf="project">
+  
+  <!-- BACK BUTTON (Sticky top) -->
+  <div class="bg-white border-b border-brand-lightBorder sticky top-[73px] z-40 shadow-sm hidden md:block">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-3">
+      <a routerLink="/projects" class="inline-flex items-center space-x-2 text-xs font-extrabold uppercase tracking-wider text-brand-textSecondary hover:text-brand-orange transition-colors">
+        <span>←</span>
+        <span>Back to Portfolio</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- IMMERSIVE HERO -->
+  <section class="relative h-[60vh] min-h-[400px] w-full bg-brand-darkBg overflow-hidden border-b-4 border-brand-orange">
+    <img [src]="project.image" [alt]="project.title" class="w-full h-full object-cover opacity-80" />
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-darkBg via-brand-darkBg/60 to-transparent"></div>
+    <div class="absolute inset-0 dot-grid-gray opacity-20 pointer-events-none"></div>
+
+    <div class="absolute bottom-0 left-0 w-full p-6 md:p-12 pb-12">
+      <div class="max-w-7xl mx-auto space-y-4">
+        <div class="inline-flex items-center space-x-2 px-3 py-1.5 bg-brand-orange/90 text-white border border-brand-orange/20 bevel-br shadow-md">
+          <span class="text-xs uppercase font-extrabold tracking-widest">{{ project.categoryLabel }}</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow-md">
+          {{ project.title }}
+        </h1>
+        <div class="flex items-center space-x-4 text-gray-300 text-sm font-bold tracking-wider uppercase">
+          <span class="flex items-center space-x-1">
+            <span class="text-brand-orange">📍</span>
+            <span>{{ project.location }}</span>
+          </span>
+          <span *ngIf="project.award" class="flex items-center space-x-1 text-brand-goldAccent">
+            <span>{{ project.award }}</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT OVERVIEW & DETAILS -->
+  <section class="py-16 max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
+    
+    <!-- Left Column: Description -->
+    <div class="lg:col-span-8 space-y-8">
+      <div class="flex items-center space-x-3 text-brand-orange">
+        <span class="w-8 h-[3px] bg-brand-orange inline-block"></span>
+        <span class="text-xs uppercase font-extrabold tracking-widest">PROJECT BRIEF</span>
+      </div>
+      
+      <div class="bg-white p-8 md:p-12 border border-brand-lightBorder rounded-none bevel-tl-br shadow-xl relative">
+        <div class="absolute top-0 right-0 w-32 h-32 hatch-gray opacity-20 pointer-events-none"></div>
+        <h2 class="text-3xl font-extrabold text-brand-textPrimary mb-6">Execution & Scope</h2>
+        <p class="text-brand-textSecondary text-base leading-relaxed font-medium">
+          {{ project.description }}
+        </p>
+        
+        <div class="mt-8 pt-8 border-t border-brand-lightBorder grid grid-cols-2 gap-6">
+          <div>
+            <h4 class="text-brand-textPrimary font-extrabold text-sm uppercase tracking-wider mb-1">Delivery Method</h4>
+            <p class="text-brand-textSecondary text-sm font-medium">General Contracting</p>
+          </div>
+          <div>
+            <h4 class="text-brand-textPrimary font-extrabold text-sm uppercase tracking-wider mb-1">Client Market</h4>
+            <p class="text-brand-textSecondary text-sm font-medium">{{ project.categoryLabel }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Sidebar Stats/CTA -->
+    <div class="lg:col-span-4 space-y-6">
+      <div class="bg-white p-8 border border-brand-lightBorder rounded-none bevel-tr shadow-sm">
+        <h3 class="text-brand-textPrimary font-extrabold text-lg uppercase tracking-wider border-b border-brand-lightBorder pb-3 mb-4">Project Data</h3>
+        <ul class="space-y-4">
+          <li class="flex justify-between items-center text-sm">
+            <span class="text-brand-textSecondary font-bold">Status</span>
+            <span class="text-brand-textPrimary font-extrabold uppercase bg-brand-lightBg px-2 py-1">Completed</span>
+          </li>
+          <li class="flex justify-between items-center text-sm">
+            <span class="text-brand-textSecondary font-bold">Location</span>
+            <span class="text-brand-textPrimary font-extrabold uppercase">{{ project.location }}</span>
+          </li>
+          <li class="flex justify-between items-center text-sm">
+            <span class="text-brand-textSecondary font-bold">Contractor</span>
+            <span class="text-brand-textPrimary font-extrabold uppercase">Middleman</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Quick CTA -->
+      <div class="bg-brand-darkBg p-8 border border-brand-darkBorder rounded-none shadow-xl text-center space-y-4 relative overflow-hidden">
+        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-orange/10 rounded-full blur-[40px] pointer-events-none"></div>
+        <h3 class="text-white font-extrabold text-lg">Plan A Similar Build?</h3>
+        <p class="text-gray-400 text-xs font-medium">Connect with our estimating team to review schematics.</p>
+        <a routerLink="/contact" class="px-6 py-3 mt-4 bg-brand-orange text-white text-xs font-extrabold uppercase tracking-wider rounded-none bevel-br hover:bg-brand-orangeDark transition-all block shadow-md hover:-translate-y-0.5">
+          Request Proposal
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- IMAGE GALLERY -->
+  <section class="py-16 bg-white border-t border-brand-lightBorder">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 space-y-8">
+      <div class="flex items-center space-x-3 text-brand-orange">
+        <span class="w-8 h-[3px] bg-brand-orange inline-block"></span>
+        <span class="text-xs uppercase font-extrabold tracking-widest">SHOWCASE GALLERY</span>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        @for (img of project.galleryImages; track img) {
+          <div class="relative aspect-video overflow-hidden border border-brand-lightBorder shadow-sm hover:shadow-xl transition-all duration-500 group bevel-tr">
+            <img [src]="img" alt="Gallery Image" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-brand-darkBg/10 group-hover:bg-transparent transition-colors duration-500"></div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ERROR / NOT FOUND STATE -->
+<div *ngIf="!project" class="min-h-screen bg-brand-lightBg flex flex-col items-center justify-center text-center p-6 pt-20">
+  <div class="text-brand-orange text-6xl font-extrabold mb-4">404</div>
+  <h2 class="text-3xl font-extrabold text-brand-textPrimary mb-4">Project Not Found</h2>
+  <p class="text-brand-textSecondary font-medium mb-8">We could not locate the details for this specific project.</p>
+  <a routerLink="/projects" class="px-8 py-3 bg-brand-orange text-white font-extrabold text-sm uppercase tracking-wider rounded-none bevel-br hover:bg-brand-orangeDark transition-all shadow-md">
+    Return to Portfolio
+  </a>
+</div>

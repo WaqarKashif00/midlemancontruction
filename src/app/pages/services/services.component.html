@@ -1,0 +1,279 @@
+<div class="bg-brand-lightBg text-brand-textPrimary min-h-screen pt-20">
+  
+  <!-- INNER HERO BANNER -->
+  <section class="relative py-24 px-6 md:px-12 overflow-hidden border-b border-brand-lightBorder bg-brand-whiteCard">
+    <div class="absolute inset-0 z-0 opacity-10">
+      <img 
+        src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=1920&q=80" 
+        alt="Services Banner" 
+        class="w-full h-full object-cover grayscale"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-whiteCard via-brand-whiteCard/80 to-transparent"></div>
+    </div>
+    
+    <div class="absolute inset-0 dot-grid-gray opacity-40 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10 space-y-4 text-center">
+      <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand-orange/10 border border-brand-orange/20">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-brand-orange">OUR CAPABILITIES</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-brand-textPrimary">
+        Integrated South Texas <span class="text-brand-orange">Facility Delivery</span>
+      </h1>
+      <p class="text-brand-textSecondary text-lg max-w-2xl mx-auto font-medium">
+        Serving the commercial construction community through a variety of delivery formats, including conventional General Construction, CMAR, and turnkey design-build services.
+      </p>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE HORIZONTAL TABS SHOWCASE (TDIndustries Signature Style) -->
+  <section class="py-20 max-w-7xl mx-auto px-6 md:px-12">
+    
+    <!-- Tab Grid Header (4 side-by-side tabs) -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 mb-1">
+      
+      <!-- Tab 1 -->
+      <div class="relative">
+        <button 
+          (click)="setActiveTab('precon')"
+          [ngClass]="activeTab === 'precon' ? 'bg-brand-orange text-white font-extrabold shadow-md' : 'bg-white border border-brand-lightBorder border-b-0 hover:bg-brand-lightBg text-brand-textSecondary hover:text-brand-textPrimary'"
+          class="w-full py-5 text-center uppercase tracking-wider text-xs md:text-sm transition-all duration-300 font-bold relative flex items-center justify-center space-x-2 bevel-tr">
+          <span>01. Pre-Construction</span>
+        </button>
+        <!-- Down-pointing triangle indicating active block -->
+        <div *ngIf="activeTab === 'precon'" class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-brand-orange z-20"></div>
+      </div>
+
+      <!-- Tab 2 -->
+      <div class="relative">
+        <button 
+          (click)="setActiveTab('construction')"
+          [ngClass]="activeTab === 'construction' ? 'bg-brand-orange text-white font-extrabold shadow-md' : 'bg-white border border-brand-lightBorder border-b-0 hover:bg-brand-lightBg text-brand-textSecondary hover:text-brand-textPrimary'"
+          class="w-full py-5 text-center uppercase tracking-wider text-xs md:text-sm transition-all duration-300 font-bold relative flex items-center justify-center space-x-2 bevel-tr">
+          <span>02. Construction</span>
+        </button>
+        <div *ngIf="activeTab === 'construction'" class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-brand-orange z-20"></div>
+      </div>
+
+      <!-- Tab 3 -->
+      <div class="relative">
+        <button 
+          (click)="setActiveTab('selfperformed')"
+          [ngClass]="activeTab === 'selfperformed' ? 'bg-brand-orange text-white font-extrabold shadow-md' : 'bg-white border border-brand-lightBorder border-b-0 hover:bg-brand-lightBg text-brand-textSecondary hover:text-brand-textPrimary'"
+          class="w-full py-5 text-center uppercase tracking-wider text-xs md:text-sm transition-all duration-300 font-bold relative flex items-center justify-center space-x-2 bevel-tr">
+          <span>03. Self-Performed</span>
+        </button>
+        <div *ngIf="activeTab === 'selfperformed'" class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-brand-orange z-20"></div>
+      </div>
+
+      <!-- Tab 4 -->
+      <div class="relative">
+        <button 
+          (click)="setActiveTab('costcontrol')"
+          [ngClass]="activeTab === 'costcontrol' ? 'bg-brand-orange text-white font-extrabold shadow-md' : 'bg-white border border-brand-lightBorder border-b-0 hover:bg-brand-lightBg text-brand-textSecondary hover:text-brand-textPrimary'"
+          class="w-full py-5 text-center uppercase tracking-wider text-xs md:text-sm transition-all duration-300 font-bold relative flex items-center justify-center space-x-2 bevel-tr">
+          <span>04. Cost Control</span>
+        </button>
+        <div *ngIf="activeTab === 'costcontrol'" class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-brand-orange z-20"></div>
+      </div>
+
+    </div>
+
+    <!-- Active Tab Content Area (Light B2B card with accents) -->
+    <div class="bg-brand-whiteCard p-8 md:p-12 border-t-4 border-t-brand-orange border border-brand-lightBorder shadow-md relative overflow-hidden bevel-br min-h-[500px] flex items-center">
+      
+      <!-- Diagonal Hatch Accent in background -->
+      <div class="absolute bottom-0 right-0 w-48 h-48 hatch-gray opacity-30 pointer-events-none"></div>
+      <!-- Dot grid accent in corner -->
+      <div class="absolute top-6 left-6 w-20 h-24 dot-grid-gray opacity-40 pointer-events-none"></div>
+
+      <!-- TAB Content: Pre-Construction -->
+      <div *ngIf="activeTab === 'precon'" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full relative z-10 animate-[fadeInUp_0.4s_ease-out]">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="text-brand-orange text-xs font-extrabold uppercase tracking-widest border-b border-brand-lightBorder pb-2">01. PRE-CONSTRUCTION PHASE</div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-brand-textPrimary leading-tight">
+            Vetting Every Single Architectural & Engineering Spec
+          </h2>
+          <p class="text-brand-textSecondary text-sm md:text-base font-medium leading-relaxed">
+            Middleman's pre-construction services provide comprehensive site audits, preliminary scheduling compliance forecasts, value engineering suggestions, and deep Authorities Having Jurisdiction (AHJ) coordination to eliminate build risks before ground breaks.
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs md:text-sm text-brand-textPrimary font-bold">
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Site Selection & Contract Development</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Design Team Evaluation & Vetting</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Review of Design Criteria & Needs</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Constructability & Systems Evaluation</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Value Engineering & Material Audits</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Pre-Bid & Pre-Award Conferences</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Beveled Image Frame -->
+        <div class="lg:col-span-5 relative w-full aspect-[4/3] bg-white p-2 border border-brand-lightBorder shadow-md bevel-tl-br group">
+          <img 
+            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" 
+            alt="Pre-construction services" 
+            class="w-full h-full object-cover bevel-tl-br transition-transform duration-700"
+          />
+        </div>
+      </div>
+
+      <!-- TAB Content: Construction -->
+      <div *ngIf="activeTab === 'construction'" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full relative z-10 animate-[fadeInUp_0.4s_ease-out]">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="text-brand-orange text-xs font-extrabold uppercase tracking-widest border-b border-brand-lightBorder pb-2">02. ON-SITE EXECUTION PHASE</div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-brand-textPrimary leading-tight">
+            Schedule Compliance & Full Jobsite Supervision
+          </h2>
+          <p class="text-brand-textSecondary text-sm md:text-base font-medium leading-relaxed">
+            Our experienced project managers, general superintendents, and administrative coordinators monitor every aspect of work. We handle all contract management, Quality Assurance testing, and cost control benchmarks.
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs md:text-sm text-brand-textPrimary font-bold">
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Contract Management & Project Accounting</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Full-Time, On-Site Staff Coordination</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>RFI & Submittals tracking pipelines</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Quality Assurance / Quality Control testing</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Periodic Progress Reports & Closeout</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Post-construction & Warranty Support</span>
+            </li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 relative w-full aspect-[4/3] bg-white p-2 border border-brand-lightBorder shadow-md bevel-tl-br group">
+          <img 
+            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" 
+            alt="On-site construction supervision" 
+            class="w-full h-full object-cover bevel-tl-br transition-transform duration-700"
+          />
+        </div>
+      </div>
+
+      <!-- TAB Content: Self-Performed -->
+      <div *ngIf="activeTab === 'selfperformed'" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full relative z-10 animate-[fadeInUp_0.4s_ease-out]">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="text-brand-orange text-xs font-extrabold uppercase tracking-widest border-b border-brand-lightBorder pb-2">03. CRAFT Benmchmarks</div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-brand-textPrimary leading-tight">
+            Superb Self-Performed Rough & Finish Carpentry
+          </h2>
+          <p class="text-brand-textSecondary text-sm md:text-base font-medium leading-relaxed">
+            By directly performing critical trades, we enforce visual excellence, eliminate scheduling lags, and maintain top accountability for rough carpentry, door & hardware installation, and custom millwork fabrication.
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs md:text-sm text-brand-textPrimary font-bold">
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Rough & Structural Carpentry Crew</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>High-End Architectural Finish Carpentry</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Commercial Door & Finish Hardware Vetting</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Custom Millwork Fabrication & Fitting</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Erosion Control Maintenance & Skilled Labor</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Field Engineering & Detailed Layout</span>
+            </li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 relative w-full aspect-[4/3] bg-white p-2 border border-brand-lightBorder shadow-md bevel-tl-br group">
+          <img 
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" 
+            alt="Self-performed carpentry and layout" 
+            class="w-full h-full object-cover bevel-tl-br transition-transform duration-700"
+          />
+        </div>
+      </div>
+
+      <!-- TAB Content: Cost Control -->
+      <div *ngIf="activeTab === 'costcontrol'" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full relative z-10 animate-[fadeInUp_0.4s_ease-out]">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="text-brand-orange text-xs font-extrabold uppercase tracking-widest border-b border-brand-lightBorder pb-2">04. BUDGETARY INTELLIGENCE</div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-brand-textPrimary leading-tight">
+            Critical Path Method Scheduling & Life Cycle Vetting
+          </h2>
+          <p class="text-brand-textSecondary text-sm md:text-base font-medium leading-relaxed">
+            Costs are managed continuously through alternate system analyses, life cycle cost reviews, energy efficiency checks, and rigorous Critical Path Method (CPM) master scheduling.
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs md:text-sm text-brand-textPrimary font-bold">
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Initial Scope, Budgets, & Schedules Audited</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Pricing Take-offs Completed at Each Phase</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Team Vetting for Value Engineering Accents</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Energy Efficiency & Materials Reviews</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Multiple Subcontractor Bids for Competition</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="w-2 h-2 mt-1.5 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span>Long-Lead Items Identified Early to Protect Schedules</span>
+            </li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 relative w-full aspect-[4/3] bg-white p-2 border border-brand-lightBorder shadow-md bevel-tl-br group">
+          <img 
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" 
+            alt="Cost control and budgeting" 
+            class="w-full h-full object-cover bevel-tl-br transition-transform duration-700"
+          />
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</div>

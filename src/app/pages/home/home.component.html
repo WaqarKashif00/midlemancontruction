@@ -1,0 +1,526 @@
+<div class="bg-brand-lightBg overflow-hidden min-h-screen text-brand-textPrimary font-sans">
+  
+  <!-- HERO SECTION -->
+  <section #heroSection class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-6 md:px-12 overflow-hidden bg-brand-whiteCard border-b border-brand-lightBorder">
+    <!-- Clean, Bright Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80" 
+        alt="Middleman Cinematic Construction Site" 
+        class="w-full h-full object-cover opacity-20 scale-105 transform motion-safe:animate-[pulseGlow_10s_infinite_ease-in-out]"
+      />
+      <!-- Light gradient overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+    </div>
+
+    <!-- Drafting dot grid overlay -->
+    <div class="absolute inset-0 dot-grid-gray opacity-40 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Hero Text -->
+      <div class="lg:col-span-8 space-y-8 text-left animate-[fadeInUp_0.6s_ease-out]">
+        
+        <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-brand-orange/10 border border-brand-orange/30 backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
+          <span class="text-xs uppercase font-extrabold tracking-widest text-brand-orange">
+            Specializing in Commercial Construction Since 1998
+          </span>
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] text-brand-textPrimary">
+          We Build Projects of All <br>
+          <span class="text-brand-orange">Sizes & Complexities</span>
+        </h1>
+
+        <p class="text-lg md:text-xl text-brand-textSecondary font-medium leading-relaxed max-w-2xl">
+          Founded in 1998 by Mark Middleman, Middleman Construction Company has become a premier general contractor for South Texas commercial retail, multi-story office, healthcare, and industrial projects.
+        </p>
+
+        <!-- CTA & Actions -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+          <a routerLink="/projects" class="px-8 py-4 bg-brand-orange hover:bg-brand-orangeDark text-white font-bold text-center rounded-xl transition-all duration-300 shadow-xl shadow-brand-orange/20 hover:scale-[1.02] active:scale-95">
+            Explore Our Projects
+          </a>
+          <a href="tel:2103426322" class="px-8 py-4 bg-brand-whiteCard hover:bg-brand-lightBg text-brand-textPrimary font-bold text-center rounded-xl border border-brand-lightBorder hover:border-brand-orange/40 transition-all duration-300 flex items-center justify-center space-x-2 shadow-sm">
+            <span>📞</span>
+            <span>Call 210.342.6322</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges Row -->
+        <div class="grid grid-cols-3 gap-6 pt-12 border-t border-brand-lightBorder max-w-2xl">
+          <div>
+            <p class="text-brand-orange text-3xl font-extrabold tracking-tight">28+</p>
+            <p class="text-brand-textSecondary text-[11px] uppercase tracking-wider font-bold mt-1">Years of Integrity</p>
+          </div>
+          <div>
+            <p class="text-brand-textPrimary text-3xl font-extrabold tracking-tight">450+</p>
+            <p class="text-brand-textSecondary text-[11px] uppercase tracking-wider font-bold mt-1">Completed Builds</p>
+          </div>
+          <div>
+            <p class="text-brand-goldAccent text-3xl font-extrabold tracking-tight">Platinum</p>
+            <p class="text-brand-textSecondary text-[11px] uppercase tracking-wider font-bold mt-1">ABC STEP Award</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Sidebar Trust Indicator Card (Light B2B Style) -->
+      <div class="lg:col-span-4 hidden lg:block animate-[fadeInUp_0.8s_ease-out]">
+        <div class="bg-brand-lightBg bevel-tr border border-brand-lightBorder rounded-xl p-8 space-y-6 relative shadow-2xl">
+          
+          <div class="flex items-center space-x-3 border-b border-brand-lightBorder pb-4">
+            <div class="w-12 h-12 rounded-lg bg-brand-orange/15 flex items-center justify-center text-brand-orange">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-brand-textPrimary font-extrabold text-xl">Award-Winning</h3>
+          </div>
+
+          <p class="text-brand-textSecondary text-sm font-medium leading-relaxed">
+            Highly decorated General Contractor recognized by the Associated Builders and Contractors (ABC), American Subcontractors Association (ASA), and the U.S. Green Building Council.
+          </p>
+
+          <div class="pt-4 flex justify-between items-center text-xs font-bold">
+            <span class="text-brand-textSecondary">Safety Status</span>
+            <span class="px-2 py-1 bg-brand-orange/10 text-brand-orange rounded">ABC Platinum STEP</span>
+          </div>
+          <div class="flex justify-between items-center text-xs font-bold">
+            <span class="text-brand-textSecondary">Credential</span>
+            <span class="text-brand-textPrimary">Accredited Quality Contractor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="py-24 bg-brand-lightBg relative z-10 border-b border-brand-lightBorder">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      
+      <!-- About Image Collage (Light Mode) -->
+      <div class="lg:col-span-6 relative">
+        <div class="relative w-full aspect-[4/3] bg-white p-2 shadow-xl border border-brand-lightBorder bevel-tr z-10">
+          <img 
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" 
+            alt="Middleman Construction Site Inspection" 
+            class="w-full h-full object-cover bevel-tr"
+          />
+        </div>
+        
+        <!-- Parallel Hatch Accent -->
+        <div class="absolute -top-6 -left-6 w-32 h-32 hatch-pattern z-0"></div>
+
+        <!-- Overlapping Stats Panel -->
+        <div class="absolute -bottom-6 -right-6 md:right-6 bg-brand-whiteCard border border-brand-lightBorder bevel-bl-tr p-6 shadow-2xl max-w-[280px] hidden sm:block z-20">
+          <div class="flex items-center space-x-4 mb-3">
+            <div class="w-10 h-10 rounded-full bg-brand-orange/20 flex items-center justify-center text-brand-orange text-lg font-bold">✓</div>
+            <div>
+              <h4 class="text-brand-textPrimary font-extrabold text-sm">Schedule Compliance</h4>
+              <p class="text-brand-orange text-[10px] uppercase font-bold">Critical Path Method (CPM)</p>
+            </div>
+          </div>
+          <p class="text-brand-textSecondary text-xs leading-relaxed font-medium">
+            We organize major building milestones into a managed timeline to assure project success.
+          </p>
+        </div>
+      </div>
+
+      <!-- About Narrative -->
+      <div class="lg:col-span-6 space-y-6">
+        <div class="flex items-center space-x-3 text-brand-orange">
+          <span class="w-8 h-[3px] bg-brand-orange inline-block"></span>
+          <span class="text-xs uppercase font-extrabold tracking-widest">ABOUT MIDDLEMAN</span>
+        </div>
+        
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-brand-textPrimary leading-tight">
+          Texas Commercial Contractor <br><span class="text-brand-orange">For Over 28 Years</span>
+        </h2>
+
+        <p class="text-brand-textSecondary leading-relaxed font-medium text-base">
+          Middleman Construction Company has been serving the San Antonio commercial construction community for over 28 years by building and maintaining strong relationships with clients in numerous South Texas industries.
+        </p>
+
+        <p class="text-brand-textSecondary leading-relaxed font-medium text-base">
+          We specialize in commercial retail and office spaces, mixed-use complexes, multi-story construction, medical center infrastructure, and high-end tenant finish-outs. Our team works closely with developers, architects, and designers to incorporate designs and layouts that satisfy both programmatic and budgetary guidelines.
+        </p>
+
+        <div class="grid grid-cols-2 gap-6 pt-6 border-t border-brand-lightBorder mt-6">
+          <div class="flex items-start space-x-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-orange shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <div>
+              <h4 class="text-brand-textPrimary font-bold text-sm">Design-Build Turnkey</h4>
+              <p class="text-brand-textSecondary text-xs mt-1 font-medium">Single-point contract management for optimal constructability and delivery speed.</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-orange shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <div>
+              <h4 class="text-brand-textPrimary font-bold text-sm">Accountability</h4>
+              <p class="text-brand-textSecondary text-xs mt-1 font-medium">Rigorous qualification evaluations ensuring top quality and scheduling control.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6">
+          <a routerLink="/about" class="px-6 py-3 bg-brand-whiteCard border border-brand-lightBorder text-brand-orange font-extrabold text-sm rounded-lg hover:bg-brand-orange hover:text-white transition-all shadow-sm inline-block uppercase tracking-wider">
+            Read Our History & Team
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="py-24 bg-brand-whiteCard relative z-10 border-b border-brand-lightBorder">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3 text-brand-orange">
+            <span class="w-8 h-[3px] bg-brand-orange inline-block"></span>
+            <span class="text-xs uppercase font-extrabold tracking-widest">WHAT WE DO</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-brand-textPrimary leading-tight">
+            Our Official <br><span class="text-brand-orange">Construction Formats</span>
+          </h2>
+        </div>
+        <p class="text-brand-textSecondary text-sm md:text-base font-medium max-w-md mt-4 md:mt-0 leading-relaxed border-l-4 border-brand-orange pl-4">
+          Middleman Construction meets facility needs through a variety of delivery formats including conventional General Construction, Construction Management, and design-build turnkey construction.
+        </p>
+      </div>
+
+      <!-- Services Grid (TD style light cards) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="bg-brand-lightBg bevel-tr border border-brand-lightBorder p-8 space-y-6 flex flex-col justify-between group cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-white shadow-sm border border-brand-lightBorder flex items-center justify-center text-brand-orange font-extrabold text-xl group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+              01
+            </div>
+            <h3 class="text-brand-textPrimary font-extrabold text-xl">
+              Pre-Construction
+            </h3>
+            <p class="text-brand-textSecondary text-sm leading-relaxed font-medium">
+              Assisting with site selection, design criteria assessments, systems evaluation (structural, MEP), preliminary budgeting, value engineering, and Authorities Having Jurisdiction (AHJ) coordination.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-brand-lightBorder flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider font-extrabold text-brand-orange">Details</span>
+            <span class="text-brand-textPrimary font-bold group-hover:translate-x-1.5 transition-transform">→</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-brand-lightBg bevel-tr border border-brand-lightBorder p-8 space-y-6 flex flex-col justify-between group cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-white shadow-sm border border-brand-lightBorder flex items-center justify-center text-brand-orange font-extrabold text-xl group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+              02
+            </div>
+            <h3 class="text-brand-textPrimary font-extrabold text-xl">
+              Construction Services
+            </h3>
+            <p class="text-brand-textSecondary text-sm leading-relaxed font-medium">
+              Total Contract & Project Management, subcontractor management, submittals & RFI tracking, quality assurance, cost control, and full post-construction/warranty support.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-brand-lightBorder flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider font-extrabold text-brand-orange">Details</span>
+            <span class="text-brand-textPrimary font-bold group-hover:translate-x-1.5 transition-transform">→</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-brand-lightBg bevel-tr border border-brand-lightBorder p-8 space-y-6 flex flex-col justify-between group cursor-pointer hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-white shadow-sm border border-brand-lightBorder flex items-center justify-center text-brand-orange font-extrabold text-xl group-hover:bg-brand-orange group-hover:text-white transition-all duration-300">
+              03
+            </div>
+            <h3 class="text-brand-textPrimary font-extrabold text-xl">
+              Self-Performed Work
+            </h3>
+            <p class="text-brand-textSecondary text-sm leading-relaxed font-medium">
+              Performing expert rough/finish carpentry, commercial door & hardware installation, millwork fabrication/installation, skilled labor, and detailed field layout engineering.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-brand-lightBorder flex items-center justify-between">
+            <span class="text-xs uppercase tracking-wider font-extrabold text-brand-orange">Details</span>
+            <span class="text-brand-textPrimary font-bold group-hover:translate-x-1.5 transition-transform">→</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 text-center">
+        <a routerLink="/services" class="px-8 py-4 bg-brand-orange hover:bg-brand-orangeDark text-white font-extrabold uppercase tracking-wider text-sm rounded-lg shadow-lg hover:shadow-brand-orange/30 transition-all inline-block">
+          Explore All Capabilities
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section class="py-24 bg-brand-lightBg relative z-10 border-b border-brand-lightBorder">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3 text-brand-orange">
+            <span class="w-8 h-[3px] bg-brand-orange inline-block"></span>
+            <span class="text-xs uppercase font-extrabold tracking-widest">FEATURED DEVELOPMENTS</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-brand-textPrimary leading-tight">
+            Our Real-World <span class="text-brand-orange">Achievements</span>
+          </h2>
+        </div>
+        <a routerLink="/projects" class="text-brand-orange font-extrabold text-sm uppercase tracking-wider hover:text-brand-orangeDark transition-colors mt-4 md:mt-0 flex items-center space-x-1">
+          <span>View All Projects</span>
+          <span class="text-lg">→</span>
+        </a>
+      </div>
+
+      <!-- Projects Showcase Grid (Light Theme) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Project 1 -->
+        <div class="relative group bg-white border border-brand-lightBorder shadow-xl bevel-tr flex flex-col justify-end min-h-[400px] overflow-hidden">
+          <div class="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" 
+              alt="Singing Hills Development" 
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          </div>
+          
+          <!-- Tag -->
+          <div class="absolute top-6 left-6 px-3 py-1.5 bg-brand-orange text-white font-extrabold text-xs uppercase shadow-md tracking-wider bevel-br">
+            Mixed-Use / Retail
+          </div>
+
+          <!-- Content -->
+          <div class="relative z-10 p-8 space-y-3">
+            <span class="text-xs text-brand-goldAccent font-extrabold uppercase tracking-widest drop-shadow-md">🏆 SABJ Best New Development</span>
+            <h3 class="text-2xl font-extrabold text-white">
+              Singing Hills Bulverde
+            </h3>
+            <p class="text-gray-200 text-sm leading-relaxed max-w-md font-medium">
+              A landmark 250-acre mixed-use development at US 281 & SH 46 in Bulverde, TX. Winner of the ABC National Excellence in Construction Award and SABJ Best Retail Development.
+            </p>
+            <div class="pt-4 border-t border-white/20 flex items-center justify-between text-xs text-brand-orange font-extrabold uppercase tracking-wider">
+              <span>Bulverde, TX (Comal County)</span>
+              <span class="text-white group-hover:translate-x-2 transition-transform">View Details →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="relative group bg-white border border-brand-lightBorder shadow-xl bevel-tr flex flex-col justify-end min-h-[400px] overflow-hidden">
+          <div class="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80" 
+              alt="Comfort Surgery Medical Center" 
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          </div>
+          
+          <!-- Tag -->
+          <div class="absolute top-6 left-6 px-3 py-1.5 bg-brand-orange text-white font-extrabold text-xs uppercase shadow-md tracking-wider bevel-br">
+            Medical / Healthcare
+          </div>
+
+          <!-- Content -->
+          <div class="relative z-10 p-8 space-y-3">
+            <span class="text-xs text-brand-goldAccent font-extrabold uppercase tracking-widest drop-shadow-md">🏆 ASA Project of the Year Winner</span>
+            <h3 class="text-2xl font-extrabold text-white">
+              Comfort Surgery Center of SA
+            </h3>
+            <p class="text-gray-200 text-sm leading-relaxed max-w-md font-medium">
+              Advanced surgical and medical facility built under rigid scheduling compliance. Honored as the 2019 ASA Excellence in Construction Project of the Year.
+            </p>
+            <div class="pt-4 border-t border-white/20 flex items-center justify-between text-xs text-brand-orange font-extrabold uppercase tracking-wider">
+              <span>San Antonio, TX</span>
+              <span class="text-white group-hover:translate-x-2 transition-transform">View Details →</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SAFETY & QUALITY TRUST SECTION -->
+  <section class="py-24 bg-brand-whiteCard relative z-10 border-b border-brand-lightBorder">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      
+      <div class="lg:col-span-7 space-y-8">
+        <div class="flex items-center space-x-3 text-brand-orange">
+          <span class="w-8 h-[3px] bg-brand-orange inline-block"></span>
+          <span class="text-xs uppercase font-extrabold tracking-widest">SAFETY & RECOGNITION</span>
+        </div>
+
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-brand-textPrimary leading-tight">
+          Proven Safety & <span class="text-brand-orange">Accredited Quality</span>
+        </h2>
+
+        <p class="text-brand-textSecondary leading-relaxed font-medium text-base">
+          At Middleman Construction, our commitment to safety is a core corporate value. Our safety programs have earned us the prestigious **ABC Platinum S.T.E.P. Safety Excellence Award** consecutively, reflecting our rigorous jobsite command.
+        </p>
+
+        <!-- Accolades Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+          <div class="bg-brand-lightBg rounded-xl p-6 border border-brand-lightBorder bevel-br">
+            <div class="text-brand-orange text-2xl font-extrabold">STEP Platinum</div>
+            <h4 class="text-brand-textPrimary font-extrabold text-sm mt-1 uppercase tracking-wider">ABC Safety Excellence</h4>
+            <p class="text-brand-textSecondary text-xs mt-2 font-medium">Recognized consecutively for our superior, low-risk field safety protocols and workforce safety training.</p>
+          </div>
+          <div class="bg-brand-lightBg rounded-xl p-6 border border-brand-lightBorder bevel-tr">
+            <div class="text-brand-goldAccent text-2xl font-extrabold drop-shadow-sm">Accredited Contractor</div>
+            <h4 class="text-brand-textPrimary font-extrabold text-sm mt-1 uppercase tracking-wider">ABC AQC Credentials</h4>
+            <p class="text-brand-textSecondary text-xs mt-2 font-medium">Honored as an Accredited Quality Contractor (AQC) for our dedication to corporate responsibility, safety, and community integration.</p>
+          </div>
+        </div>
+
+        <div class="pt-4 flex flex-wrap gap-4">
+          <a routerLink="/safety" class="px-8 py-4 bg-brand-orange hover:bg-brand-orangeDark text-white font-extrabold uppercase tracking-wider text-sm rounded-lg transition-all shadow-md">
+            Review Our Safety Record
+          </a>
+        </div>
+      </div>
+
+      <!-- Right side Graphic / Affinity Logos -->
+      <div class="lg:col-span-5 relative">
+        <div class="bg-white rounded-2xl p-8 border border-brand-lightBorder shadow-xl space-y-6 relative overflow-hidden bevel-tl-br z-10">
+          <div class="absolute -right-20 -bottom-20 w-48 h-48 bg-brand-orange/10 rounded-full blur-3xl"></div>
+          
+          <h3 class="text-brand-textPrimary font-extrabold text-lg border-b border-brand-lightBorder pb-4 uppercase tracking-wider">Corporate Recognition</h3>
+          
+          <ul class="space-y-4 pt-2">
+            <li class="flex items-center space-x-3 text-sm">
+              <span class="w-3 h-3 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span class="text-brand-textPrimary font-bold">Associated Builders and Contractors (ABC)</span>
+            </li>
+            <li class="flex items-center space-x-3 text-sm">
+              <span class="w-3 h-3 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span class="text-brand-textPrimary font-bold">American Subcontractors Association (ASA)</span>
+            </li>
+            <li class="flex items-center space-x-3 text-sm">
+              <span class="w-3 h-3 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span class="text-brand-textPrimary font-bold">San Antonio Business Journal Best Developer</span>
+            </li>
+            <li class="flex items-center space-x-3 text-sm">
+              <span class="w-3 h-3 rounded-none bevel-br bg-brand-orange shrink-0"></span>
+              <span class="text-brand-textPrimary font-bold">U.S. Green Building Council Member</span>
+            </li>
+          </ul>
+
+          <div class="p-5 bg-brand-lightBg border border-brand-lightBorder rounded-xl mt-8">
+            <p class="text-xs text-brand-textSecondary font-medium leading-relaxed italic">
+              "We partner with our clients to deliver quality commercial builds on schedule, backed by a strict qualifications process for all trade sub-contractors."
+            </p>
+            <p class="text-right text-brand-orange text-[10px] uppercase font-extrabold tracking-wider mt-3">
+              - Mark Middleman, President
+            </p>
+          </div>
+        </div>
+        <!-- Dot grid accent -->
+        <div class="absolute -bottom-8 -left-8 w-32 h-32 dot-grid-gray opacity-50 z-0 pointer-events-none"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES SERVED -->
+  <section class="py-24 bg-brand-lightBg relative z-10 border-b border-brand-lightBorder">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+        <div class="flex items-center justify-center space-x-3 text-brand-orange">
+          <span class="w-8 h-[3px] bg-brand-orange inline-block"></span>
+          <span class="text-xs uppercase font-extrabold tracking-widest">MARKETS & SECTORS</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-brand-textPrimary leading-tight">
+          Specializing in Commercial <span class="text-brand-orange">Developments</span>
+        </h2>
+        <p class="text-brand-textSecondary font-medium text-sm md:text-base leading-relaxed">
+          Serving San Antonio and South Texas since 1998, we have built key properties across diverse markets.
+        </p>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        
+        <div class="bg-white p-6 rounded-xl border border-brand-lightBorder shadow-sm text-center hover:border-brand-orange hover:shadow-md transition-all duration-300 group cursor-pointer bevel-tr">
+          <div class="w-12 h-12 rounded-lg bg-brand-lightBg border border-brand-lightBorder flex items-center justify-center text-brand-orange mx-auto mb-4 group-hover:bg-brand-orange group-hover:text-white transition-all">
+            🏬
+          </div>
+          <h4 class="text-brand-textPrimary font-extrabold text-sm tracking-wide">Commercial Retail</h4>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-brand-lightBorder shadow-sm text-center hover:border-brand-orange hover:shadow-md transition-all duration-300 group cursor-pointer bevel-tr">
+          <div class="w-12 h-12 rounded-lg bg-brand-lightBg border border-brand-lightBorder flex items-center justify-center text-brand-orange mx-auto mb-4 group-hover:bg-brand-orange group-hover:text-white transition-all">
+            🏢
+          </div>
+          <h4 class="text-brand-textPrimary font-extrabold text-sm tracking-wide">Corporate Offices</h4>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-brand-lightBorder shadow-sm text-center hover:border-brand-orange hover:shadow-md transition-all duration-300 group cursor-pointer bevel-tr">
+          <div class="w-12 h-12 rounded-lg bg-brand-lightBg border border-brand-lightBorder flex items-center justify-center text-brand-orange mx-auto mb-4 group-hover:bg-brand-orange group-hover:text-white transition-all">
+            🏥
+          </div>
+          <h4 class="text-brand-textPrimary font-extrabold text-sm tracking-wide">Medical Centers</h4>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-brand-lightBorder shadow-sm text-center hover:border-brand-orange hover:shadow-md transition-all duration-300 group cursor-pointer bevel-tr">
+          <div class="w-12 h-12 rounded-lg bg-brand-lightBg border border-brand-lightBorder flex items-center justify-center text-brand-orange mx-auto mb-4 group-hover:bg-brand-orange group-hover:text-white transition-all">
+            🏗️
+          </div>
+          <h4 class="text-brand-textPrimary font-extrabold text-sm tracking-wide">Mixed-Use Builds</h4>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-brand-lightBorder shadow-sm text-center hover:border-brand-orange hover:shadow-md transition-all duration-300 group cursor-pointer bevel-tr">
+          <div class="w-12 h-12 rounded-lg bg-brand-lightBg border border-brand-lightBorder flex items-center justify-center text-brand-orange mx-auto mb-4 group-hover:bg-brand-orange group-hover:text-white transition-all">
+            🛠️
+          </div>
+          <h4 class="text-brand-textPrimary font-extrabold text-sm tracking-wide">Interior Finish-Outs</h4>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="py-24 bg-white border-t border-brand-lightBorder relative overflow-hidden text-brand-textPrimary">
+    <!-- Light Background for contrast at the bottom -->
+    <div class="absolute inset-0 z-0 opacity-20 dot-grid-gray"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-orange/10 blur-[150px] rounded-full pointer-events-none"></div>
+    
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+        Start Your Next Commercial Build <span class="text-brand-orange">Today</span>
+      </h2>
+      <p class="text-brand-textSecondary text-base font-medium leading-relaxed max-w-2xl mx-auto">
+        Join our development team as a valuable B2B partner. Let Middleman Construction Company LLC plan, estimate, and realize your retail space, medical office, or mixed-use development on schedule.
+      </p>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a routerLink="/contact" class="px-10 py-5 bg-brand-orange hover:bg-brand-orangeDark text-white font-extrabold uppercase tracking-wider text-sm rounded-none bevel-br transition-all shadow-md hover:-translate-y-1 active:translate-y-0 block w-full sm:w-auto">
+          Contact Our Estimating Office
+        </a>
+        <a href="tel:2103426322" class="px-10 py-5 bg-brand-lightBg border border-brand-lightBorder hover:border-brand-orange hover:bg-white text-brand-textPrimary font-extrabold uppercase tracking-wider text-sm rounded-none bevel-tr transition-all block w-full sm:w-auto shadow-sm">
+          Call 210.342.6322
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>

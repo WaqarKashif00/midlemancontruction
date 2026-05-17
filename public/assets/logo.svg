@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 190" width="100%" height="100%">
+  <!-- Left Geometric Tower -->
+  <path d="M10,120 L10,30 L130,30 L130,120 L95,120 L95,60 L45,60 L45,120 Z" fill="#0B0D13" />
+  
+  <!-- Right Geometric Tower (Taller) -->
+  <path d="M140,120 L140,10 L260,10 L260,120 L225,120 L225,40 L175,40 L175,120 Z" fill="#0B0D13" />
+  
+  <!-- Golden-Brown Horizontal Baseline (starts at inner leg of left tower) -->
+  <rect x="45" y="125" width="215" height="5" fill="#B98324" />
+  
+  <!-- Typography (Forced justification to perfectly align with the outer edges of the towers) -->
+  <text x="10" y="160" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="34" fill="#0B0D13" textLength="250" lengthAdjust="spacingAndGlyphs">MIDDLEMAN</text>
+  <text x="10" y="180" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="16.5" fill="#0B0D13" textLength="250" lengthAdjust="spacingAndGlyphs">CONSTRUCTION COMPANY</text>
+</svg>
